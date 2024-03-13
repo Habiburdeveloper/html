@@ -9,7 +9,7 @@ body{
 .container{
     width: 1250px;
     margin: 0 auto;
-    border: 1px inset rgb(87, 2, 2);
+    box-shadow: 0px 10px 10px rgb(2, 1, 1);
 }
 
 /* header */
@@ -26,6 +26,7 @@ header{
 }
 nav{
     float: right;
+    padding-top: 20px;
 }
 nav ul li{
     display: inline-block;
@@ -53,10 +54,40 @@ main section{
 }
 main section article{
     float: right;
+    padding: 20px 10px 20px 10px;
+    border: 1px solid rgba(105, 2, 2, 0.555);
+    margin-bottom: 15px;
+}
+main section article h2{
+    font-size: 32px;
+    color: rgb(43, 46, 240);
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+} 
+main section article p{
+    font-size: 18px;
+    padding: 10px 0 30px 0;
+    text-transform: 400;
+    color: rgb(0, 0, 0);
+    font-family: "Noto Sans Mono", monospace;
+    font-weight: 400;
+} 
+main section article a{
+    text-decoration: none;
+    border: 1px solid rgb(43, 46, 240);
+    padding: 10px 15px 10px 15px;
+    border-radius: 4px;
+    text-transform: uppercase;
+}
+main section article a:hover{
+    background-color: crimson;
+    color: #fff;
+    border: none;
+    transition: 0.4s;
 }
 main aside{
     float: right;
-    width: 25%;
+    width: 26%;
     padding: 16px 20px 16px 20px;
 }
 
@@ -69,4 +100,57 @@ footer{
 footer p{
     text-align: center;
     font-size: 22px;
+}
+/* outline style */
+.outline article{
+    margin: 30px;
+}
+.outline article p{
+    padding: 10px;
+    background-color: rgb(43, 226, 134);
+    outline: 5px solid rgb(245, 16, 16);
+    outline-offset: 10px;
+}
+.outline article p::selection{
+    color: red;
+}
+
+/* pesudo class */
+.link{
+    text-decoration: none;
+    font-size: 24px;
+}
+.link:link{
+    color: red;
+}
+.link:visited{
+    color: rgb(189, 255, 8);
+}
+.link:hover{
+    color: darkgreen;
+}
+.link:active{
+    color: rgb(3, 34, 209);
+}
+
+input[type="radio"]:checked{
+    width: 20px;
+    height: 20px;
+}
+input[type="radio"]:default{
+    width: 20px;
+    height: 20px;
+}
+input[type="text"]:disabled{
+    background-color: rgb(248, 99, 99);
+}
+input[type="text"]:enabled{
+    background-color: rgb(3, 240, 50);
+}
+.one > h6:first-of-type{
+    color: red;
+    font-size: 30px;
+}
+.one :nth-child(n+10):nth-child(even):nth-child(-n + 15){
+    background-color: chartreuse;
 }
