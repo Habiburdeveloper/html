@@ -151,6 +151,51 @@ input[type="text"]:enabled{
     color: red;
     font-size: 30px;
 }
-.one :nth-child(n+10):nth-child(even):nth-child(-n + 15){
-    background-color: chartreuse;
+.one :not(:nth-child(even)){
+    background-color: rgb(12, 238, 69);
+}
+#email:invalid{
+    border: 2px double red;
+    outline: 0;
+}
+#email:valid{
+    border: 2px double rgb(2, 243, 94);
+    outline: 0;
+}
+.link-1{
+    margin: 15px 7px 15px 7px;
+}
+.link-1 a{
+    text-decoration: none;
+    font-size: 13px;
+    border: 1px dotted rgb(204, 248, 9);
+    border-radius: 5px;
+    padding: 5px;
+    background-color: rgb(8, 8, 8);
+    color: #fff;
+}
+.link-2{
+    background-color: aqua;
+    margin-bottom: 30px;
+}
+:target{
+    background-color: darkorange;
+}
+#home,
+.contact,
+.range{
+    margin-bottom: 20px;
+}
+input[type="number"]:in-range{
+    border: 2px solid green;
+    outline: 0;
+}
+input[type="number"]:out-of-range{
+    border-color: red;
+    outline: 0;
+}
+input[type="text"]:required{
+    background-color: rgb(203, 247, 11);
+    outline: 0;
+    border: none;
 }
